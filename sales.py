@@ -1,14 +1,12 @@
 import pandas as pd
-shahab = pd.read_csv('large_sales_dataset.csv')
+shahab = pd.read_csv('cleaned_sales_dataset.csv')
 print(shahab.head())
-
-
 
 ##Explore your dataset:====
 ## Before cleaning data, we should understand how much data we have and whether it contains missing or duplicate values.
 
 import pandas as pd
-shahab=pd.read_csv('large_sales_dataset.csv')
+shahab=pd.read_csv('cleaned_sales_dataset.csv')
 # Display the first five Row
 print("Display the First Five rows.")
 print(shahab.head())
@@ -32,7 +30,7 @@ print(shahab.duplicated().sum())
 
 ## Remove duplicate rows:==
 import pandas as pd
-shahab=pd.read_csv('large_sales_dataset.csv')
+shahab=pd.read_csv('cleaned_sales_dataset.csv')
 
 # Count duplicates before removing them
 print("Duplicate Before Cleaning:")
@@ -51,7 +49,7 @@ print(shahab.shape)
 
 
 import pandas as pd
-shahab=pd.read_csv("large_sales_dataset.csv")
+shahab=pd.read_csv("cleaned_sales_dataset.csv")
 #  Missing value in each column
 print(shahab.isnull().sum())
 
@@ -65,7 +63,7 @@ print(shahab.isnull().any(axis=1).sum())
 
 # dropna() ka matlab hai un rows ko remove karna jin mein missing values (NaN) hoti hain.
 import pandas as pd
-shahab = pd.read_csv('large_sales_dataset.csv')
+shahab = pd.read_csv('cleaned_sales_dataset.csv')
 print("before Messing value.")
 print(shahab.isnull().sum())
 
@@ -94,11 +92,11 @@ print("Dataset shape:", shahab.shape)
 
 
 import pandas as pd
-shahab=pd.read_csv('large_sales_dataset.csv')
+shahab=pd.read_csv('cleaned_sales_dataset.csv')
 print(shahab.dtypes)
 
 import pandas as pd
-shahab = pd.read_csv('large_sales_dataset.csv')
+shahab = pd.read_csv('cleaned_sales_dataset.csv')
 # Convert Date column in to Datatime formate
 shahab["Date"] = pd.to_datetime(shahab["Date"])
 
@@ -117,7 +115,7 @@ shahab.to_csv('sales_data_converted.csv',index=False)
 print("\nUpdated Dataset Successfully.")
 
 import pandas as pd
-shahab = pd.read_csv('large_sales_dataset.csv')
+shahab = pd.read_csv('cleaned_sales_dataset.csv')
 # Convert Date column into datetime format
 shahab['Date'] = pd.to_datetime(shahab['Date'], errors='coerce')
  
